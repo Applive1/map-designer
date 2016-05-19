@@ -9,8 +9,8 @@ var routes = require('./routes/index');
 var app = express();
 
 // expose node_modules to client app
-app.use(express.static(path.join(__dirname, 'node_modules')));
-app.use('/app', express.static(path.join(__dirname, 'app')));
+app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
+app.use('/ng', express.static(path.join(__dirname, 'app')));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
