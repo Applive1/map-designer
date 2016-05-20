@@ -1,4 +1,4 @@
-System.register(['angular2/core', './model/optionsEnum', './components/droplet', './components/navbar/navbutton'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,39 +10,28 @@ System.register(['angular2/core', './model/optionsEnum', './components/droplet',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, optionsEnum_1, droplet_1, navbutton_1;
-    var AppComponent;
+    var core_1;
+    var DropletComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (optionsEnum_1_1) {
-                optionsEnum_1 = optionsEnum_1_1;
-            },
-            function (droplet_1_1) {
-                droplet_1 = droplet_1_1;
-            },
-            function (navbutton_1_1) {
-                navbutton_1 = navbutton_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
-                    this.selectedView = optionsEnum_1.Options.Tiles;
+            DropletComponent = (function () {
+                function DropletComponent() {
                 }
-                AppComponent = __decorate([
+                DropletComponent = __decorate([
                     core_1.Component({
-                        selector: 'map-designer',
-                        templateUrl: 'templates/components/appcomponent.html',
-                        directives: [droplet_1.DropletComponent, navbutton_1.NavButton]
+                        selector: 'droplet',
+                        templateUrl: 'templates/components/droplet.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], DropletComponent);
+                return DropletComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("DropletComponent", DropletComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=droplet.js.map

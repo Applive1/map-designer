@@ -1,4 +1,4 @@
-System.register(['angular2/core', './model/optionsEnum', './components/droplet', './components/navbar/navbutton'], function(exports_1, context_1) {
+System.register(['angular2/core', '../model/optionsEnum'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(['angular2/core', './model/optionsEnum', './components/droplet',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, optionsEnum_1, droplet_1, navbutton_1;
-    var AppComponent;
+    var core_1, optionsEnum_1;
+    var NavButton;
     return {
         setters:[
             function (core_1_1) {
@@ -19,30 +19,24 @@ System.register(['angular2/core', './model/optionsEnum', './components/droplet',
             },
             function (optionsEnum_1_1) {
                 optionsEnum_1 = optionsEnum_1_1;
-            },
-            function (droplet_1_1) {
-                droplet_1 = droplet_1_1;
-            },
-            function (navbutton_1_1) {
-                navbutton_1 = navbutton_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            NavButton = (function () {
+                function NavButton() {
                     this.selectedView = optionsEnum_1.Options.Tiles;
                 }
-                AppComponent = __decorate([
+                NavButton = __decorate([
                     core_1.Component({
-                        selector: 'map-designer',
-                        templateUrl: 'templates/components/appcomponent.html',
-                        directives: [droplet_1.DropletComponent, navbutton_1.NavButton]
+                        selector: 'nav-button',
+                        templateUrl: 'templates/components/navbar/navbutton.html',
+                        directives: [DropletComponent]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], NavButton);
+                return NavButton;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("NavButton", NavButton);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=button.js.map
