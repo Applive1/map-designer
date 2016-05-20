@@ -10,7 +10,7 @@ var app = express();
 
 // expose node_modules to client app
 app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
-app.use('/ng', express.static(path.join(__dirname, 'app')));
+app.use('/app', express.static(path.join(__dirname, 'app')));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -30,7 +30,6 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
@@ -52,6 +51,8 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
 
 
 module.exports = app;
