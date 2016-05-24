@@ -1,0 +1,7 @@
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+	<a class="navbar-brand" href="#">Map Designer</a>
+	<div class="pull-right">
+		<nav-button [isActive]="selected == 'tiles'" (click)="toggle('tiles')" text="Tiles"></nav-button>
+		<nav-button [isActive]="selected == 'map'" (click)="toggle('map')" text="Map"></nav-button>
+	</div>
+</nav>

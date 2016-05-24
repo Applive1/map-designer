@@ -1,16 +1,20 @@
 import { Component } from 'angular2/core';
-import { Options} from './model/optionsEnum';
-import {DropletComponent} from './components/droplet';
-import {NavButton} from './components/navbar/navbutton';
+import { NavbarComponent } from './components/navbar/navbarComponent';
+import { TilesComponent } from './components/tiles/tilesComponent';
+import { MapComponent } from './components/map/mapComponent';
 
 @Component({
 	selector: 'map-designer',
 	templateUrl: 'templates/components/appcomponent.html',
-	directives: [DropletComponent, NavButton]
+	directives: [NavbarComponent, TilesComponent, MapComponent]
 
 })
-export class AppComponent { 
+export class AppComponent {
 
-	private selectedView: Options = Options.Tiles;
+	private selectedView: string = 'tiles';
+
+	public onToggle(toggleTo: string) {
+		this.selectedView = toggleTo;
+	}
 
 }

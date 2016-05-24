@@ -1,0 +1,12 @@
+<h1>Tiles Cropper</h1>
+<div class="card">
+	<div class="card-block text-xs-center dashed p-a-3" droppable [dragClass]="'bg-info'" [dropClass]="'bg-success'" (dropped)="onFileDrop()">
+		<span class="h4">Drop your image file to scan</span>
+		<!-- <p class="card-text">[Problably say something about the path]</p>   -->
+	</div>
+	<div class="card-footer text-xs-right">
+		<!-- <button class="btn btn-primary">Select File</button> -->
+		<button class="btn btn-primary" [disabled]="!imageFile" (click)="crop()">Crop it</button> 
+	</div>
+</div>
+<image-loader [setSrc]="imageFile"></image-loader>

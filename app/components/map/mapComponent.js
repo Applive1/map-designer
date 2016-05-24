@@ -11,27 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var DropletComponent;
+    var MapComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            DropletComponent = (function () {
-                function DropletComponent() {
+            MapComponent = (function () {
+                function MapComponent() {
                 }
-                DropletComponent = __decorate([
+                MapComponent = __decorate([
                     core_1.Component({
-                        selector: 'droplet',
-                        templateUrl: 'templates/components/droplet.html'
+                        selector: 'map-view',
+                        templateUrl: 'templates/components/map/mapview.html',
+                        directives: []
                     }), 
                     __metadata('design:paramtypes', [])
-                ], DropletComponent);
-                return DropletComponent;
+                ], MapComponent);
+                return MapComponent;
             }());
-            exports_1("DropletComponent", DropletComponent);
+            exports_1("MapComponent", MapComponent);
         }
     }
 });
-//# sourceMappingURL=droplet.js.map
+//# sourceMappingURL=mapComponent.js.map

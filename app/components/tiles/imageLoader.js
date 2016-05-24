@@ -11,27 +11,36 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var DragNDropComponent;
+    var ImageLoaderComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            DragNDropComponent = (function () {
-                function DragNDropComponent() {
+            ImageLoaderComponent = (function () {
+                function ImageLoaderComponent() {
                 }
-                DragNDropComponent = __decorate([
+                ImageLoaderComponent.prototype.paintSrc = function () {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(this.src);
+                };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', File)
+                ], ImageLoaderComponent.prototype, "src", void 0);
+                ImageLoaderComponent = __decorate([
                     core_1.Component({
-                        selector: 'dragndrop',
-                        templateUrl: 'templates/components/dragndrop.html'
+                        selector: 'image-loader',
+                        templateUrl: 'templates/components/tiles/imageloader.html',
+                        directives: []
                     }), 
                     __metadata('design:paramtypes', [])
-                ], DragNDropComponent);
-                return DragNDropComponent;
+                ], ImageLoaderComponent);
+                return ImageLoaderComponent;
             }());
-            exports_1("DragNDropComponent", DragNDropComponent);
+            exports_1("ImageLoaderComponent", ImageLoaderComponent);
         }
     }
 });
-//# sourceMappingURL=dragndrop.js.map
+//# sourceMappingURL=imageLoader.js.map
