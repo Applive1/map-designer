@@ -12,6 +12,16 @@
   },
   "license": "ISC",
   "dependencies": {
+    
+    "express": "^4.9.8",
+    "http": "latest",
+    "path": "latest",
+    "morgan": "latest",
+    "body-parser":"latest",
+    "serve-favicon":"latest",
+    "cookie-parser":"latest",
+    "authy": "latest",
+    
     "@angular/common": "^2.0.0-rc.1",
     "@angular/compiler": "^2.0.0-rc.1",
     "@angular/core": "^2.0.0-rc.1",
