@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "preinstall" : "npm install -g typings",
     "postinstall": "npm run typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
@@ -33,9 +34,10 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "typescript": "^1.8.10"
+    "typings": "^0.8.1",
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
-    "typescript": "^1.8.10",
-    "typings": "^0.8.1"
+  
   }
 }
